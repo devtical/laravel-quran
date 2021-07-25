@@ -1,0 +1,6 @@
+{
+  "name": "laravel-quran",
+  "dependencies": {
+    "palestine": "^0.0.0"
+  }
+}
