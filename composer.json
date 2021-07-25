@@ -1,0 +1,45 @@
+{
+    "name": "wearedevtical/laravel-quran",
+    "description": "Laravel Quran static Eloquent model",
+    "license": "mit",
+    "authors": [
+        {
+            "name": "Wahyu Kristianto",
+            "email": "w.kristories@gmail.com",
+            "homepage": "https://github.com/kristories"
+        }
+    ],
+    "homepage": "https://github.com/wearedevtical/laravel-quran",
+    "keywords": [
+        "laravel",
+        "eloquent",
+        "al-quran",
+        "quran",
+        "muslim",
+        "islam"
+    ],
+    "require": {
+        "illuminate/support": "~7|~8",
+        "calebporzio/sushi": "^2.2",
+        "league/csv": "^9.7"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~9.0",
+        "orchestra/testbench": "~5|~6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Devtical\\Quran\\": "src/"
+        }
+    },
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Devtical\\Quran\\QuranServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
