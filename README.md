@@ -4,7 +4,7 @@
 
 Laravel Quran is static Eloquent model for Quran.
 
-The Qur'an has never changed and never will, because Allah protecting it. ```(15:9) إِنَّا نَحۡنُ نَزَّلۡنَا ٱلذِّكۡرَ وَإِنَّا لَهُۥ لَحَـٰفِظُونَ```. All data is fetched from the [API](https://alquran.cloud/api). Changes only occur in translation and transliteration.
+The Quran has never changed and never will, because Allah protecting it. ```(15:9) إِنَّا نَحۡنُ نَزَّلۡنَا ٱلذِّكۡرَ وَإِنَّا لَهُۥ لَحَـٰفِظُونَ```. All data is fetched from the [API](https://alquran.cloud/api). Changes only occur in translation and transliteration.
 
 ## Installation
 
