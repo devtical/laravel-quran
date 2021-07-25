@@ -16,12 +16,66 @@ $ composer require wearedevtical/laravel-quran
 
 ## Usage
 
-```php
-$surah = Surah::find(36);  // This will return ayah 36
-$surah->ayahs;             // This will return entire ayah of surah 36
+Find surah by ID
 
-$ayah  = Ayah::find(3787); // This will return surah 3787
-$ayah->surah;              // This will return ayah 36
+```php
+$surah = Surah::find(36);
+```
+
+```bash
+[
+  "id" => 36
+  "title" => "سُورَةُ يسٓ"
+  "transliteration" => "Yaseen"
+]
+```
+
+Get all ayah(s) from surah
+
+```php
+$surah->ayahs;
+```
+
+```bash
+[
+  0 => array:7 [
+    "id" => 3706
+    "surah_id" => "36"
+    "content" => "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ يسٓ"
+    "translate_en" => "O THOU human being!"
+    "translate_id" => "Yaa siin"
+    "number" => "1"
+    "juz" => "22"
+  ]
+  1 => array:7 [
+    "id" => 3707
+    "surah_id" => "36"
+    "content" => "وَٱلْقُرْءَانِ ٱلْحَكِيمِ"
+    "translate_en" => "Consider this Qur’an full of wisdom:"
+    "translate_id" => "Demi Al Quran yang penuh hikmah,"
+    "number" => "2"
+    "juz" => "22"
+  ]
+  ...
+]
+```
+
+Find ayah by ID
+
+```php
+$ayah  = Ayah::find(3787);
+```
+
+```bash
+[
+  "id" => 3787
+  "surah_id" => "36"
+  "content" => "إِنَّمَآ أَمْرُهُۥٓ إِذَآ أَرَادَ شَيْـًٔا أَن يَقُولَ لَهُۥ كُن فَيَكُونُ"
+  "translate_en" => "His Being alone is such that when He wills a thing to be, He but says unto it, “Be” — and it is."
+  "translate_id" => "Sesungguhnya keadaan-Nya apabila Dia menghendaki sesuatu hanyalah berkata kepadanya: "Jadilah!" maka terjadilah ia."
+  "number" => "82"
+  "juz" => "23"
+]
 ```
 
 ## Change log
