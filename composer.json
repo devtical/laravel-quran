@@ -32,6 +32,10 @@
             "Devtical\\Quran\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Devtical\\Quran\\Tests\\": "tests"
+        }
     },
     "extra": {
         "laravel": {
@@ -39,6 +43,10 @@
                 "Devtical\\Quran\\QuranServiceProvider"
             ]
         }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
     },
     "minimum-stability": "dev",
     "prefer-stable": true
