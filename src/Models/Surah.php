@@ -3,11 +3,17 @@
 namespace Devtical\Quran\Models;
 
 use Devtical\Quran\Models\Ayah;
-use Devtical\Quran\Models\Model;
+use Illuminate\Database\Eloquent\Model;
 use League\Csv\Reader;
+use Sushi\Sushi;
 
 class Surah extends Model
 {
+    use Sushi;
+
+    /**
+     * Setup schema for columns
+     */
     protected $schema = [
         'id'              => 'integer',
         'title'           => 'string',
@@ -15,11 +21,19 @@ class Surah extends Model
         'translation_en"' => 'string',
     ];
 
+    /**
+     * A surah has many ayah(s)
+     * @return \Devtical\Quran\Models\Ayah
+     */
     public function ayahs()
     {
-        return $this->hasMany(Ayah::class, 'surah_id', 'id');
+        return $this->hasMany(Ayah::class);
     }
 
+    /**
+     * Process data via CSV
+     * @return array
+     */
     public function getRows()
     {
         $records = Reader::createFromPath(__DIR__ . '/../../resources/fixtures/surah.csv', 'r')

@@ -2,12 +2,18 @@
 
 namespace Devtical\Quran\Models;
 
-use Devtical\Quran\Models\Model;
 use Devtical\Quran\Models\Surah;
+use Illuminate\Database\Eloquent\Model;
 use League\Csv\Reader;
+use Sushi\Sushi;
 
 class Ayah extends Model
 {
+    use Sushi;
+
+    /**
+     * Setup schema for columns
+     */
     protected $schema = [
         'id'           => 'integer',
         'surah_id'     => 'integer',
@@ -18,11 +24,19 @@ class Ayah extends Model
         'juz'          => 'integer',
     ];
 
+    /**
+     * A surah belong to ayah
+     * @return \Devtical\Quran\Models\Surah
+     */
     public function surah()
     {
         return $this->belongsTo(Surah::class);
     }
 
+    /**
+     * Process data via CSV
+     * @return array
+     */
     public function getRows()
     {
         $records = Reader::createFromPath(__DIR__ . '/../../resources/fixtures/ayah.csv', 'r')
