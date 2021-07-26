@@ -2,7 +2,6 @@
 
 namespace Devtical\Quran\Models;
 
-use Devtical\Quran\Models\Ayah;
 use Illuminate\Database\Eloquent\Model;
 use League\Csv\Reader;
 use Sushi\Sushi;
@@ -12,7 +11,7 @@ class Surah extends Model
     use Sushi;
 
     /**
-     * Setup schema for columns
+     * Setup schema for columns.
      */
     protected $schema = [
         'id'              => 'integer',
@@ -22,7 +21,8 @@ class Surah extends Model
     ];
 
     /**
-     * A surah has many ayah(s)
+     * A surah has many ayah(s).
+     *
      * @return \Devtical\Quran\Models\Ayah
      */
     public function ayahs()
@@ -31,12 +31,13 @@ class Surah extends Model
     }
 
     /**
-     * Process data via CSV
+     * Process data via CSV.
+     *
      * @return array
      */
     public function getRows()
     {
-        $records = Reader::createFromPath(__DIR__ . '/../../resources/fixtures/surah.csv', 'r')
+        $records = Reader::createFromPath(__DIR__.'/../../resources/fixtures/surah.csv', 'r')
             ->setHeaderOffset(0)
             ->getRecords();
 
