@@ -105,15 +105,3 @@ If you discover any security related issues, please email author instead of usin
 ## License
 
 The MIT License (MIT). Please see the [license file](LICENSE.md) for more information.
-
-[ico-version]: https://img.shields.io/packagist/v/devtical/quran.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/devtical/quran.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/devtical/quran/master.svg?style=flat-square
-[ico-styleci]: https://styleci.io/repos/12345678/shield
-
-[link-packagist]: https://packagist.org/packages/devtical/quran
-[link-downloads]: https://packagist.org/packages/devtical/quran
-[link-travis]: https://travis-ci.org/devtical/quran
-[link-styleci]: https://styleci.io/repos/12345678
-[link-author]: https://github.com/devtical
-[link-contributors]: ../../contributors
