@@ -1,8 +1,55 @@
 # Contributing
 
-Contributions are welcome and will be fully credited.
+Contributions are welcome and will be fully credited. Contributions are accepted via Pull Requests on [Github](https://github.com/wearedevtical/laravel-quran).
 
-Contributions are accepted via Pull Requests on [Github](https://github.com/wearedevtical/laravel-quran).
+You can download Quran translations available on [Tanzil](https://tanzil.net/trans).
+
+## Translations
+
+- [ ] Albanian
+- [ ] Amazigh
+- [ ] Arabic
+- [ ] Amharic
+- [ ] Azerbaijani
+- [ ] Bengali
+- [ ] Bosnian
+- [ ] Bulgarian
+- [ ] Chinese
+- [ ] Czech
+- [ ] Divehi
+- [ ] Dutch
+- [x] English
+- [ ] French
+- [ ] German
+- [ ] Hausa
+- [ ] Hindi
+- [x] Indonesian
+- [ ] Italian
+- [ ] Japanese
+- [ ] Korean
+- [ ] Kurdish
+- [ ] Malay
+- [ ] Malayalam
+- [ ] Norwegian
+- [ ] Pashto
+- [ ] Persian
+- [ ] Polish
+- [ ] Portuguese
+- [ ] Romanian
+- [ ] Russian
+- [ ] Sindhi
+- [ ] Somali
+- [ ] Spanish
+- [ ] Swahili
+- [ ] Swedish
+- [ ] Tajik
+- [ ] Tamil
+- [ ] Tatar
+- [ ] Thai
+- [ ] Turkish
+- [ ] Urdu
+- [ ] Uyghur
+- [ ] Uzbek
 
 ## Pull Requests
 
