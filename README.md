@@ -100,6 +100,8 @@ If you discover any security related issues, please email author instead of usin
 
 - [Wahyu Kristianto](https://github.com/kristories)
 - [Meezaan-ud-Din Abdu Dhil-Jalali Wal-Ikram](https://github.com/meezaan)
+- [Islamic Network](https://islamic.network)
+- [Tanzil](https://tanzil.net)
 - [All Contributors](https://github.com/wearedevtical/laravel-quran/graphs/contributors)
 
 ## License
