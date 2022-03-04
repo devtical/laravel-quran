@@ -3,7 +3,6 @@
 namespace Devtical\Quran\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use League\Csv\Reader;
 use Sushi\Sushi;
 
 class Surah extends Model
@@ -36,11 +35,11 @@ class Surah extends Model
      */
     public function getRows()
     {
-        $json = __DIR__.'/../../resources/fixtures/_original/source.json';
+        $json = __DIR__ . '/../../resources/fixtures/_original/source.json';
         $records = json_decode(file_get_contents($json), true);
 
         return collect($records)
-            ->map(function($item, $key){
+            ->map(function ($item, $key) {
                 return [
                     'name' => $item['name'],
                     'transliteration' => $item['transliteration'],
@@ -48,10 +47,5 @@ class Surah extends Model
             })
             ->values()
             ->toArray();
-    }
-
-    protected function sushiShouldCache()
-    {
-        return false;
     }
 }

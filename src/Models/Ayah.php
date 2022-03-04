@@ -3,7 +3,6 @@
 namespace Devtical\Quran\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use League\Csv\Reader;
 use Sushi\Sushi;
 
 class Ayah extends Model
@@ -37,17 +36,18 @@ class Ayah extends Model
      */
     public function getRows()
     {
-        $json = __DIR__.'/../../resources/fixtures/_original/source.json';
+        $json = __DIR__ . '/../../resources/fixtures/_original/source.json';
         $records = json_decode(file_get_contents($json), true);
 
         return collect($records)
-            ->map(function($item, $key){
+            ->map(function ($item, $key) {
                 $surah_id = $key + 1;
 
                 return collect($item['verses'])
-                    ->map(function($item, $key) use ($surah_id){
+                    ->map(function ($item, $key) use ($surah_id) {
                         return [
                             'surah_id' => (int)$surah_id,
+                            'number' => (int)$item + 1,
                             'section' => $item['section'],
                             'content' => $item['content'],
                         ];
