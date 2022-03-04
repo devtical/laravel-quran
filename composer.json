@@ -21,7 +21,6 @@
     "require": {
         "illuminate/support": "~7|~8",
         "calebporzio/sushi": "^2.2",
-        "league/csv": "^9.7",
         "friendsofphp/php-cs-fixer": "^3.0"
     },
     "require-dev": {
@@ -47,7 +46,7 @@
     },
     "scripts": {
         "test": "phpunit",
-        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+        "format": "vendor/bin/php-cs-fixer fix --config=.php_cs.dist.php --allow-risky=yes"
     },
     "minimum-stability": "dev",
     "prefer-stable": true
