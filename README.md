@@ -38,23 +38,19 @@ $surah->ayahs;
 
 ```bash
 [
-  0 => array:7 [
+  0 => array:5 [
     "id" => 3706
     "surah_id" => "36"
-    "content" => "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ يسٓ"
-    "translate_en" => "O THOU human being!"
-    "translate_id" => "Yaa siin"
-    "number" => "1"
-    "juz" => "22"
-  ]
-  1 => array:7 [
-    "id" => 3707
-    "surah_id" => "36"
-    "content" => "وَٱلْقُرْءَانِ ٱلْحَكِيمِ"
-    "translate_en" => "Consider this Qur’an full of wisdom:"
-    "translate_id" => "Demi Al Quran yang penuh hikmah,"
     "number" => "2"
     "juz" => "22"
+    "content" => "بِسْمِ اللَّهِ الرَّحْمَـٰنِ الرَّحِيمِ يس"
+  ]
+  1 => array:5 [
+    "id" => 3707
+    "surah_id" => "36"
+    "number" => "2"
+    "juz" => "22"
+    "content" => "وَالْقُرْآنِ الْحَكِيمِ"
   ]
   ...
 ]
@@ -70,11 +66,9 @@ $ayah  = Ayah::find(3787);
 [
   "id" => 3787
   "surah_id" => "36"
-  "content" => "إِنَّمَآ أَمْرُهُۥٓ إِذَآ أَرَادَ شَيْـًٔا أَن يَقُولَ لَهُۥ كُن فَيَكُونُ"
-  "translate_en" => "His Being alone is such that when He wills a thing to be, He but says unto it, “Be” — and it is."
-  "translate_id" => "Sesungguhnya keadaan-Nya apabila Dia menghendaki sesuatu hanyalah berkata kepadanya: "Jadilah!" maka terjadilah ia."
-  "number" => "82"
-  "juz" => "23"
+  "number" => "2"
+  "section" => "23"
+  "content" => "إِنَّمَا أَمْرُهُ إِذَا أَرَادَ شَيْئًا أَن يَقُولَ لَهُ كُن فَيَكُونُ"
 ]
 ```
 
@@ -99,9 +93,6 @@ If you discover any security related issues, please email author instead of usin
 ## Credits
 
 - [Wahyu Kristianto](https://github.com/kristories)
-- [Meezaan-ud-Din Abdu Dhil-Jalali Wal-Ikram](https://github.com/meezaan)
-- [Islamic Network](https://islamic.network)
-- [Tanzil](https://tanzil.net)
 - [All Contributors](https://github.com/wearedevtical/laravel-quran/graphs/contributors)
 
 ## License
