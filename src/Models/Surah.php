@@ -14,10 +14,9 @@ class Surah extends Model
      * Setup schema for columns.
      */
     protected $schema = [
-        'id'              => 'integer',
-        'title'           => 'string',
+        'id' => 'integer',
+        'name' => 'string',
         'transliteration' => 'string',
-        'translation_en"' => 'string',
     ];
 
     /**
@@ -37,12 +36,22 @@ class Surah extends Model
      */
     public function getRows()
     {
-        $records = Reader::createFromPath(__DIR__.'/../../resources/fixtures/surah.csv', 'r')
-            ->setHeaderOffset(0)
-            ->getRecords();
+        $json = __DIR__.'/../../resources/fixtures/_original/source.json';
+        $records = json_decode(file_get_contents($json), true);
 
         return collect($records)
+            ->map(function($item, $key){
+                return [
+                    'name' => $item['name'],
+                    'transliteration' => $item['transliteration'],
+                ];
+            })
             ->values()
             ->toArray();
+    }
+
+    protected function sushiShouldCache()
+    {
+        return false;
     }
 }

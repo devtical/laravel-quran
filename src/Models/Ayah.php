@@ -14,13 +14,10 @@ class Ayah extends Model
      * Setup schema for columns.
      */
     protected $schema = [
-        'id'           => 'integer',
-        'surah_id'     => 'integer',
-        'content'      => 'string',
-        'translate_en' => 'string',
-        'translate_id' => 'string',
-        'number'       => 'integer',
-        'juz'          => 'integer',
+        'id' => 'integer',
+        'number' => 'integer',
+        'section' => 'string',
+        'content' => 'string',
     ];
 
     /**
@@ -40,12 +37,24 @@ class Ayah extends Model
      */
     public function getRows()
     {
-        $records = Reader::createFromPath(__DIR__.'/../../resources/fixtures/ayah.csv', 'r')
-            ->setHeaderOffset(0)
-            ->getRecords();
+        $json = __DIR__.'/../../resources/fixtures/_original/source.json';
+        $records = json_decode(file_get_contents($json), true);
 
         return collect($records)
+            ->map(function($item, $key){
+                $surah_id = $key + 1;
+
+                return collect($item['verses'])
+                    ->map(function($item, $key) use ($surah_id){
+                        return [
+                            'surah_id' => (int)$surah_id,
+                            'section' => $item['section'],
+                            'content' => $item['content'],
+                        ];
+                    });
+            })
             ->values()
+            ->flatten(1)
             ->toArray();
     }
 }
